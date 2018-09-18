@@ -206,7 +206,7 @@ window.onload = function(){
     switch(key){
       case "83":
         changeImageNoTimer(player,slideDownImg);
-        changeImageOnTimer(slideDownImg.duration,player,slideImg);
+        changeImageOnTimer(player,slideImg,slideDownImg.duration);
         if(player.y+player.height-windowSize[1] < -16){
           player.vsp = player.duckSpd;
         }
@@ -225,7 +225,7 @@ window.onload = function(){
       case "83":
         if(player.y+player.height-windowSize[1] > -32){
           changeImageNoTimer(player,slideUpImg);
-          changeImageOnTimer(slideUpImg.duration,player,runImg);
+          changeImageOnTimer(player,runImg,slideUpImg.duration);
         }
         break;
       case "87":
@@ -303,7 +303,7 @@ window.onload = function(){
   // For keeping track of auto-change animations
   var animTimer = 0;
 
-  function changeImageOnTimer(delay, thisPlayer, imgObj){
+  function changeImageOnTimer(thisPlayer, imgObj, delay){
     clearTimeout(animTimer);
     animTimer = setTimeout(changeImage,delay,thisPlayer,imgObj);
   }

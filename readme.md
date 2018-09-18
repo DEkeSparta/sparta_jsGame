@@ -11,6 +11,12 @@ To begin, simply enter the home page (index.html). All other menus and pages, in
 - HTML
 - CSS
 - JavaScript
+
 ### Images
 - GIMP
 - Pivot
+
+## Version
+The version at this location (dekesparta.github.io) was completed in the allotted 4 days.
+
+For the version with later updates, please visit danchieke.github.io
